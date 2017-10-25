@@ -8,6 +8,12 @@ body {
     text-align: center;
 }
 
+.para {
+    text-align: center;
+    color: light-grey;
+}
+
+
 .text-big {
     font-size: 300%;
     color: white;
