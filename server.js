@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get ('/article-1', function(req,res){
-    res.sendfile
+    res.send('Article one requested')
 })
 
 
