@@ -2,11 +2,23 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-
+var articleOne = {
+    title: 'IMAD | Article - 1',
+    heading:'Article - 1', 
+    date: '26/10/17',
+    content: 
+            `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>
+            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>
+            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>`
+}
 var htmlTemplate = {
     `<html>
         <head>
             <title>
+                ${title}
             </title>
             <link href='/ui/style.css' rel = 'stylesheet'/>
         </head>
@@ -20,14 +32,17 @@ var htmlTemplate = {
             <hr/>
         
             <h2>
+            ${title}
             </h2>
         
             <div>
+            ${date}
             </div>
         
             <hr/>
             
             <div>
+            ${content}
             </div>
         <hr/>
         </div>
