@@ -2,6 +2,40 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
+
+var htmlTemplate = {
+    `<html>
+        <head>
+            <title>
+            </title>
+            <link href='/ui/style.css' rel = 'stylesheet'/>
+        </head>
+        <body>
+        <div class="container">
+            <a href ="/">Home</a> 
+            |
+            <a href ="/a-2">Article-2</a>
+            |
+            <a href = "/a-3">Article-3</a>
+            <hr/>
+        
+            <h2>
+            </h2>
+        
+            <div>
+            </div>
+        
+            <hr/>
+            
+            <div>
+            </div>
+        <hr/>
+        </div>
+        </body>
+    </html>
+    `
+}
+    
 var app = express();
 app.use(morgan('combined'));
 
