@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 
 var articles = {
-    var articleOne : {
+     articleOne : {
         title: 'IMAD | Article - 1',
         heading:'Article - 1', 
         date: '26/10/17',
@@ -14,8 +14,8 @@ var articles = {
                 </p>
                 <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
                 </p>`
-    }
-    var articleTwo : {
+    },
+     articleTwo : {
         title: 'IMAD | Article - 2',
         heading:'Article - 2', 
         date: '26/10/17',
@@ -26,8 +26,8 @@ var articles = {
                 </p>
                 <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
                 </p>`
-    }
-    var articleThree : {
+    },
+     articleThree : {
         title: 'IMAD | Article - 3',
         heading:'Article - 3', 
         date: '26/10/17',
