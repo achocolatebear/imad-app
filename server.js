@@ -67,11 +67,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/ui/style.css', function (req, res) {
-  res.send (createTemplate(articleOne));
+  res.sendFile(path.join(__dirname, 'ui','stylesheet.css'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+  res.send (createTemplate(articleOne));
 });
 
 app.get ('/a-1', function(req,res){
