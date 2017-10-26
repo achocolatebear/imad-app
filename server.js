@@ -71,11 +71,11 @@ app.get('/ui/style.css', function (req, res) {
 });
 
 app.get('/ui/madi.png', function (req, res) {
-  res.send (createTemplate(articleOne));
+  res.sendFile(path.join(__dirname,'ui','madi.png'));
 });
 
 app.get ('/a-1', function(req,res){
-    res.sendFile(path.join(__dirname,'a-1.html'));
+    res.send (createTemplate(articleOne));
 });
 
 app.get ('/a-2', function(req,res){
