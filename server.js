@@ -2,41 +2,44 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var articleOne = {
-    title: 'IMAD | Article - 1',
-    heading:'Article - 1', 
-    date: '26/10/17',
-    content: 
-            `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>
-            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>
-            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>`
-};
-var articleTwo = {
-    title: 'IMAD | Article - 2',
-    heading:'Article - 2', 
-    date: '26/10/17',
-    content: 
-            `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>
-            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>
-            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>`
-};
-var articleThree = {
-    title: 'IMAD | Article - 3',
-    heading:'Article - 3', 
-    date: '26/10/17',
-    content: 
-            `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>
-            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>
-            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
-            </p>`
+var articles:{
+    var articleOne : {
+        title: 'IMAD | Article - 1',
+        heading:'Article - 1', 
+        date: '26/10/17',
+        content: 
+                `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>
+                <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>
+                <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>`
+    }
+    var articleTwo : {
+        title: 'IMAD | Article - 2',
+        heading:'Article - 2', 
+        date: '26/10/17',
+        content: 
+                `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>
+                <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>
+                <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>`
+    }
+    var articleThree : {
+        title: 'IMAD | Article - 3',
+        heading:'Article - 3', 
+        date: '26/10/17',
+        content: 
+                `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>
+                <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>
+                <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+                </p>`
+                
+    }
 };
 
 function createTemplate (data) {
@@ -96,6 +99,10 @@ app.get('/ui/style.css', function (req, res) {
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname,'ui','madi.png'));
+});
+
+app.get('/u/main.js',function(req,res){
+   res.sendFile(path.join(__dirname,'ui','main.js')) ;
 });
 
 app.get ('/a-1', function(req,res){
