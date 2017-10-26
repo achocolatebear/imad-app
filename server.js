@@ -13,49 +13,57 @@ var articleOne = {
             </p>
             <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
             </p>`
-}
-var htmlTemplate = {
-    `<html>
-        <head>
-            <title>
-                ${title}
-            </title>
-            <link href='/ui/style.css' rel = 'stylesheet'/>
-        </head>
-        <body>
-        <div class="container">
-            <a href ="/">Home</a> 
-            |
-            <a href ="/a-2">Article-2</a>
-            |
-            <a href = "/a-3">Article-3</a>
-            <hr/>
-        
-            <h2>
-            ${title}
-            </h2>
-        
-            <div>
-            ${date}
-            </div>
-        
-            <hr/>
+};
+
+function createTemplate (data) {
+    
+ var title = data.title;
+ var date = data.date;
+ var heading = data.heading;
+ var content = data.content;
+    var htmlTemplate = 
+        `<html>
+            <head>
+                <title>
+                    ${title}
+                </title>
+                <link href='/ui/style.css' rel = 'stylesheet'/>
+            </head>
+            <body>
+            <div class="container">
+                <a href ="/">Home</a> 
+                |
+                <a href ="/a-2">Article-2</a>
+                |
+                <a href = "/a-3">Article-3</a>
+                <hr/>
             
-            <div>
-            ${content}
+                <h2>
+                ${heading}
+                </h2>
+            
+                <div>
+                ${date}
+                </div>
+            
+                <hr/>
+                
+                <div>
+                ${content}
+                </div>
+            <hr/>
             </div>
-        <hr/>
-        </div>
-        </body>
-    </html>
-    `
+            </body>
+        </html>
+        `;
+        return htmlTemplate
 }
     
 var app = express();
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+  res.send (createTemplate(articleOne));
 });
 
 app.get('/ui/style.css', function (req, res) {
