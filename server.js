@@ -14,6 +14,30 @@ var articleOne = {
             <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
             </p>`
 };
+var articleTwo = {
+    title: 'IMAD | Article - 2',
+    heading:'Article - 2', 
+    date: '26/10/17',
+    content: 
+            `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>
+            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>
+            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>`
+};
+var articleThree = {
+    title: 'IMAD | Article - 3',
+    heading:'Article - 3', 
+    date: '26/10/17',
+    content: 
+            `<p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>
+            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>
+            <p>This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.This is the content for my 1st page.
+            </p>`
+};
 
 function createTemplate (data) {
     
@@ -79,11 +103,11 @@ app.get ('/a-1', function(req,res){
 });
 
 app.get ('/a-2', function(req,res){
-    res.sendFile(path.join(__dirname,'a-2.html'));
+    res.send(createTemplate(articleTwo));
 });
 
 app.get ('/a-3', function(req,res){
-    res.sendFile(path.join(__dirname,'a-3.html'));
+    res.send(createTemplate(articleThree));
 });
 
 
