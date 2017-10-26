@@ -8,6 +8,6 @@ element.innerHTML = 'New Wave';
  var img = document.getElementById('madi');
  
  img.onclick = function(){
-     img.style.marginLeft = '100'px
+     img.style.marginLeft = '100'px;
  };
  
