@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 
-var articles:{
+var articles = {
     var articleOne : {
         title: 'IMAD | Article - 1',
         heading:'Article - 1', 
