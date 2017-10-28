@@ -1,6 +1,6 @@
 // Select our element
 var button = document.getElementById("button");
-
+var counter = 0
 button.onclick = function (){
     
 };
