@@ -1,6 +1,7 @@
-var count = getElementById ("button");
+// Select our element
 
-count.onclick = function(){
+var button = document.getElementById("button");
+
+button.onclick = function (){
     
 };
- 
