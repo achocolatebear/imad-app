@@ -1,13 +1,6 @@
-console.log('Sup, Biyatch!');
+var count = getElementById ("button");
 
-var element = document.getElementById('cent');
-
-element.innerHTML = 'New Wave';
-
- // select the image
- var img = document.getElementById('madi');
- 
- img.onclick =function(){
-     img.style.marginLeft = '300px';
- };
+count.onclick = function(){
+    
+};
  
